@@ -15,5 +15,7 @@ The goal of this project was to create a vehicle that could detect the walls of 
 - <b>4 yellow TT motors</b>
 
 <h2>Challenges and Solutions</h2>
+One of the main challenges of this project was the turning. Because the motors I used were cheap and had low torque at 6V, they struggled to differentially steer on certain sides. I originally had a longer, narrower frame with no alignment system. With this design, I could turn the car left very slowly turn left very slowly, but I could not get it to turn right at all except by fully stopping the right side motors. On a slightly uneven floor, the lack of motor alignment meant I couldn't go less than ≈60% duty cycle without the motors stalling. 
+
 
 
