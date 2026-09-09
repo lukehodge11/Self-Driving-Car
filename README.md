@@ -20,7 +20,17 @@ To navigate, the main loop of the Arduino pulses and reads each sensor one at a 
 <h2>Challenges and Solutions</h2>
 One of the main challenges of this project was the turning. My idea was to program a nice gradual turn, so the car didn't have to stop and pivot every time it had to correct slightly, but because the motors I used were cheap and had low torque at 6V, they struggled to differentially steer. I originally had a long, narrow frame with no alignment system. With this design, the car could turn slowly left, but could not turn right at all. The lack of motor alignment also meant I couldn't go less than ≈60% duty cycle on certain motors without them stalling, which meant I had little PWM room to work with to increase my turn speed. So I redesigned the frame to be wider, and I added a guide clip to fit over the front piece on the motors to ensure motor alignment. With those two improvements, the car could turn easier and the wheels also wouldn't randomly stall anymore, but it still turned faster to one side than the other. My theory was that uneven weight distribution and traction was causing this, so I rearranged the electronics on top to distribute the weight somewhat evenly, and I experimented with removing the rubber treads on the tires to ensure even traction. Experimentation proved that the best tire tread configuration was no treads in the front, and both treads in the back. With this configuration I achieved the best turning so far. However, if the car was pointed at the right wall at more than ≈45 angle of attack, it could not steer left quick enough to avoid it. To solve this, I created a failsafe "pivot" function, that would stop the motors and pivot left before continuing straight. This allowed the car to achieve ≈90% obstacle avoidance success, even at high angles of attack. 
 <br>
-<img width="300" height="391" alt="motor clip" src="https://github.com/user-attachments/assets/296a5f3e-03f7-4030-a8fd-9a082e460702" />
+<p align="center">
+Motor alignment clip: <br>
+<img width="300" height="391" alt="motor clip" src="https://github.com/user-attachments/assets/296a5f3e-03f7-4030-a8fd-9a082e460702" /> <br>
+Top View: <br>
+<img width="300" height="391" alt="top view" src="https://github.com/user-attachments/assets/7d458fb6-489d-4968-beb0-c59ddffeb9ef" /><br>
+Side View: <br>
+<img width="391" height="300" alt="side view" src="https://github.com/user-attachments/assets/2132d874-540e-4977-9acc-aba075f2ec2d" /><br>
+Front View: <br>
+<img width="391" height="300" alt="front view" src="https://github.com/user-attachments/assets/300f180d-de6e-457d-8ba4-427485ed7be6" /><br>
+
+
 
 
 
